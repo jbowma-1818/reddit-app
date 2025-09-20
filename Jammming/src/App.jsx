@@ -9,10 +9,14 @@ function App() {
 
   return (
     <>
-      <SearchBar />
+      <div id='searchContainer'>
+        <SearchBar />
+      </div>
       <div id='mainContiner'>
+        <div id='resultContainer'>
+          <SearchResults />
+        </div>
         <div id='saveContainer'>
-          <SearchResults value={search} />
           <Playlist />
         </div>
       </div>
