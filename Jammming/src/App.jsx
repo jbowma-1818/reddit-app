@@ -11,6 +11,8 @@ function App() {
   //const [tracks, setTracks] = useState([]);
 
   const searchHandler = (event) => {
+    event.preventDefault();
+    Spotify.
     setSearch(event.target.value);
   };
 

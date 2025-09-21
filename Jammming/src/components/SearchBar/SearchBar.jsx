@@ -4,7 +4,7 @@ function SearchBar(props) {
     const [searchInput, setSearchInput] = useState('');
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        props.onSearch
     };
 
     const handleInputChange = (e) => {
