@@ -6,6 +6,8 @@ import Playlist from './components/Playlist/Playlist';
 
 function App() {
   const [search, setSearch] = useState('');
+  //const [playlistName, setPlaylistName] = useState('');
+  //const [tracks, setTracks] = useState([]);
 
   return (
     <>
