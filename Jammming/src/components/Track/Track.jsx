@@ -6,13 +6,21 @@ function Track() {
     const incrementId = () => setId(id + 1);
 
     let track = {
-        id: 0,
+        id: {incrementId},
         name: 'unknown',
         artist: 'unknown',
         album: 'unknown',
     };
 
-    return ({track})
+    return (
+        <>
+            <div>
+                <p>Name: {track}</p>
+                <p>Artist: {artist}</p>
+                <p>Album: {album}</p>
+            </div>
+        </>
+    );
 }
 
 export default Track;
