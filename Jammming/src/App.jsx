@@ -3,6 +3,7 @@ import './App.css'
 import SearchBar from './components/SearchBar/SearchBar';
 import SearchResults from './components/SearchResults/SearchResults';
 import Playlist from './components/Playlist/Playlist';
+import Spotify from './util/spotify'; 
 
 function App() {
   const [search, setSearch] = useState('');

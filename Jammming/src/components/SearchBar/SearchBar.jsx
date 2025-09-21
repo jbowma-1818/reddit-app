@@ -5,12 +5,10 @@ function SearchBar(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert(`Search results: ${searchInput}`);
     };
 
     const handleInputChange = (e) => {
         setSearchInput(() => e.target.value);
-        //alert(searchInput);
     };
 
     return (
