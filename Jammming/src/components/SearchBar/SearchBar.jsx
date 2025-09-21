@@ -1,13 +1,23 @@
 import { useState } from 'react';
 
-function SearchBar() {
+function SearchBar(props) {
     const [searchInput, setSearchInput] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert(`Search results: ${searchInput}`);
+    };
+
+    const handleInputChange = (e) => {
+        setSearchInput(() => e.target.value);
+        //alert(searchInput);
+    };
 
     return (
         <div id='searcBar'>
             <form>
-            <input id='search' type='text' value={(e) => setSearchInput(e.target.value)}></input>
-            <button>Search</button>
+                <input id='search' type='text' onChange={handleInputChange}></input>
+                <button onSubmit={handleSubmit}>Search</button>
             </form>
         </div>
     );

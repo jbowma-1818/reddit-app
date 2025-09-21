@@ -9,10 +9,14 @@ function App() {
   //const [playlistName, setPlaylistName] = useState('');
   //const [tracks, setTracks] = useState([]);
 
+  const searchHandler = (event) => {
+    setSearch(event.target.value);
+  };
+
   return (
     <>
       <div id='searchContainer'>
-        <SearchBar />
+        <SearchBar onSearch={searchHandler} />
       </div>
       <div id='mainContiner'>
         <div id='resultContainer'>
