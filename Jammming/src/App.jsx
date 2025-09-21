@@ -6,20 +6,26 @@ import Playlist from './components/Playlist/Playlist';
 import Spotify from './util/spotify'; 
 
 function App() {
-  const [search, setSearch] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
   //const [playlistName, setPlaylistName] = useState('');
   //const [tracks, setTracks] = useState([]);
 
-  const searchHandler = (event) => {
-    event.preventDefault();
-    Spotify.
-    setSearch(event.target.value);
+  const handleSearchResults = async (term) => {
+    try {
+      await Spotify.ensureAuth();
+
+      const result = await Spotify.search(term);
+      setSearchResults(result);
+    } catch(err) {
+      console.log('Search failed:', err);
+      setSearchResults([]);
+    }
   };
 
   return (
     <>
       <div id='searchContainer'>
-        <SearchBar onSearch={searchHandler} />
+        <SearchBar onSearch={handleSearchResults} />
       </div>
       <div id='mainContiner'>
         <div id='resultContainer'>

@@ -4,7 +4,8 @@ function SearchBar(props) {
     const [searchInput, setSearchInput] = useState('');
 
     const handleSubmit = (e) => {
-        props.onSearch
+        e.preventDefault();
+        props.onSearch(searchInput);
     };
 
     const handleInputChange = (e) => {
@@ -12,10 +13,10 @@ function SearchBar(props) {
     };
 
     return (
-        <div id='searcBar'>
-            <form>
-                <input id='search' type='text' onChange={handleInputChange}></input>
-                <button onSubmit={handleSubmit}>Search</button>
+        <div id='searchBar'>
+            <form onSubmit={handleSubmit}>
+                <input id='search' type='text' onChange={handleInputChange} value={searchInput}></input>
+                <button>Search</button>
             </form>
         </div>
     );
