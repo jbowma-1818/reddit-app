@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import SearchBar from './components/SearchBar/SearchBar';
 import SearchResults from './components/SearchResults/SearchResults';
@@ -13,7 +13,6 @@ function App() {
   const handleSearchResults = async (term) => {
     try {
       await Spotify.ensureAuth();
-
       const result = await Spotify.search(term);
       setSearchResults(result);
     } catch(err) {
@@ -22,6 +21,17 @@ function App() {
     }
   };
 
+  //const handleSearchResultsDisplay = async (newResults) => {
+
+  //};
+
+  useEffect(() => {
+    const handleSearchResultsDisplay = async () => {
+      
+    };
+    console.log(searchResults);
+  }, [searchResults]);
+
   return (
     <>
       <div id='searchContainer'>
@@ -29,7 +39,7 @@ function App() {
       </div>
       <div id='mainContiner'>
         <div id='resultContainer'>
-          <SearchResults />
+          <SearchResults results={searchResults} />
         </div>
         <div id='saveContainer'>
           <Playlist />
