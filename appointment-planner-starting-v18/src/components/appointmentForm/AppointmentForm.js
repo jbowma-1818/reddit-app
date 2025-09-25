@@ -1,4 +1,5 @@
 import React from "react";
+import { ContactPicker } from "../contactPicker/ContactPicker";
 
 const getTodayString = () => {
   const [month, day, year] = new Date()
@@ -9,8 +10,6 @@ const getTodayString = () => {
 
 export const AppointmentForm = ({
   contacts,
-  //title,
-  //setTitle,
   name,
   setName,
   contact,
@@ -25,14 +24,14 @@ export const AppointmentForm = ({
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
-        <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)}></input>
-        <label htmlFor="contact">Contact</label>
-        <input id="contact" value={contact} onChange={(e) => setContact(e.target.value)}></input>        
-        <label htmlFor="date">Date</label>
-        <input id="date" type="date" value={date} onChange={(e) => setDate(e.target.value)}></input>
-        <label htmlFor="time">Time</label>
-        <input id="time" type="time" value={time} onChange={(e) => setTime(e.target.value)}></input>
+        <label htmlFor="appt-name">Name</label>
+        <input id="appt-name" type="text" value={name} onChange={(e) => setName(e.target.value)}></input>
+        <label htmlFor="appt-date">Date</label>
+        <input id="appt-date" type="date" value={date} onChange={(e) => setDate(e.target.value)} min={getTodayString()}></input>
+        <label htmlFor="appt-time">Time</label>
+        <input id="appt-time" type="time" value={time} onChange={(e) => setTime(e.target.value)}></input>
+        <label htmlFor="appt-contact">Contact</label>
+        <ContactPicker id="appt-contact" name="contact" contacts={contacts} value={contact} onChange={(e) => setContact(e.target.value)}/>
         <button type="submit">Add Appointment</button>
       </form>
     </>
