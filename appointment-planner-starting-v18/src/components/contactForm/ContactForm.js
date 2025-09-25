@@ -12,13 +12,13 @@ export const ContactForm = ({
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label for="name">Name</label>
-        <input id="name" type="text"></input>
-        <label for="phone">Phone</label>
-        <input id="phone" type="tel"></input>
-        <label for="email">Email</label>
-        <input id="email" type="email"></input>
-        <submit></submit>
+        <label htmlFor="name">Name</label>
+        <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)}></input>
+        <label htmlFor="phone">Phone</label>
+        <input id="phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"></input>
+        <label htmlFor="email">Email</label>
+        <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+        <button type="submit">Add Contact</button>
       </form>
     </>
   );
