@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, Navigate } from "react-router-dom";
 import { selectCurrentUser, selectIsLoggedIn } from "../features/session/sessionSlice";
 
 export default function Profile () {
@@ -8,6 +8,9 @@ export default function Profile () {
   const loggedIn = useSelector(selectIsLoggedIn);
   
   // use loggedIn to return a Navigate
+  if(!loggedIn) {
+    return <Navigate to="/sign-up" />
+  }
 
   return (
     <main>
