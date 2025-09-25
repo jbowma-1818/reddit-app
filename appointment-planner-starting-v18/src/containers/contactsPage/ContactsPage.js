@@ -10,7 +10,7 @@ export const ContactsPage = ({ contacts, addContacts }) => {
   */
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
+  const [email, setEmail] = useState("");
 
   const [isDuplicate, setIsDuplicate] = useState(false);
 
@@ -29,11 +29,11 @@ export const ContactsPage = ({ contacts, addContacts }) => {
       return;
     }
 
-    addContacts(name, phone, address);
+    addContacts(name, phone, email);
 
     setName("");
     setPhone("");
-    setAddress("");
+    setEmail("");
   };
 
   /*
@@ -50,8 +50,8 @@ export const ContactsPage = ({ contacts, addContacts }) => {
           setName={setName}
           phone={phone}
           setPhone={setPhone}
-          address={address}
-          setAddress={setAddress}
+          email={email}
+          setEmail={setEmail}
           handleSubmit={handleSubmit}
         />
       </section>
