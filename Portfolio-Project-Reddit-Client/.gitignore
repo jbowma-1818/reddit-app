@@ -1,0 +1,9 @@
+# Ignore log files
+*.log
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE-specific files (example for VS Code)
+.vscode/
