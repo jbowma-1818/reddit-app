@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Post(prop){
+export default function Post({ likeCount = 0, title = 'Untitled', author = 'Unknown Author', timeframe = 0.0, commentCount = 0 }){
     return (
         <div className='post'>
             <div className='post-container'>
