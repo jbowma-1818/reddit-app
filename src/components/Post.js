@@ -6,7 +6,7 @@ export default function Post({ likeCount = 0, title = 'Untitled', author = 'Unkn
             <div className='post-container'>
                 <span className='post-like-count'>15</span>
                 <div className='post-info-container'>
-                    <h2 className='post-tile'>Test Title</h2>
+                    <h2 className='post-title'>Test Title</h2>
                     <div className='image-container'>
                         <img alt='' className='post-image' />
                     </div>
