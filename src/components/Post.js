@@ -12,7 +12,7 @@ export default function Post({ likeCount = 0, title = 'Untitled', author = 'Unkn
                     </div>
                 </div>
                 <div className='post-footer-container'>
-                    <span className='post-author'>{author}</span>
+                    <span className='post-author'>Posted by {author}</span>
                     <span className='post-timeframe'>{timeframe}</span>
                     <span className='post-comments-count'>{commentCount}</span>
                 </div>
