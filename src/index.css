@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Post Component */
+.post {
+  height: 50vh;
+  width: 60vw;
+  min-width: 500px;
+  box-shadow: -5px 5px 12px 4px;
+  margin: auto;
+  border-radius: 8px;
+}
