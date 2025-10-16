@@ -21,3 +21,9 @@ code {
   margin: auto;
   border-radius: 8px;
 }
+
+.post-container {
+  height: 100%;
+  display: flex;
+}
+
