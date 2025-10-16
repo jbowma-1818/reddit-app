@@ -4,8 +4,8 @@ export default function Post({ likeCount = 0, title = 'Untitled', author = 'Unkn
     return (
         <div className='post'>
             <div className='post-container'>
-                <span className='post-like-count'>{likeCount}</span>
-                <div className='post-info-container'>
+                <div className='post-info-container'>                
+                    <span className='post-like-count'>{likeCount}</span>
                     <h2 className='post-title'>{title}</h2>
                     <div className='image-container'>
                         <img alt='' className='post-image' />
