@@ -8,7 +8,7 @@ export const loadPosts = createAsyncThunk(
     }
 );
 
-const allPostsSlice = createSlice({
+export const allPostsSlice = createSlice({
     name: 'allPosts',
     initialState: [],
     reducers: {
