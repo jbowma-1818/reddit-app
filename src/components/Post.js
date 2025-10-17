@@ -4,18 +4,23 @@ export default function Post({ likeCount = 0, title = 'Untitled', author = 'Unkn
     return (
         <div className='post'>
             <div className='post-container'>
-                <div className='post-info-container'>                
+                <div className='post-like-count-container'>               
                     <span className='post-like-count'>{likeCount}</span>
-                    <h2 className='post-title'>{title}</h2>
-                    <div className='image-container'>
-                        <img alt='' className='post-image' />
+                </div> 
+                <div className='post-info-container'>
+                    <div className='post-body-container'>
+                        <h2 className='post-title'>{title}</h2>
+                        <div className='image-container'>
+                            <img src='' alt='' className='post-image'/>
+                        </div>
+                    </div>
+                    <div className='post-footer-container'>
+                        <span className='post-author'>Posted by {author}</span>
+                        <span className='post-timeframe'>{timeframe}</span>
+                        <span className='post-comments-count'>{commentCount}</span>
                     </div>
                 </div>
-                <div className='post-footer-container'>
-                    <span className='post-author'>Posted by {author}</span>
-                    <span className='post-timeframe'>{timeframe}</span>
-                    <span className='post-comments-count'>{commentCount}</span>
-                </div>
+
             </div>    
         </div>
     );
