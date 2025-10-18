@@ -3,7 +3,9 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const loadPosts = createAsyncThunk(
     'allPosts/getAllPosts',
     async (postId, thunkAPI) => {
-        const data = await fetch(postId); // Need to change what's inside fetch
+        const url = postId ?? 'https://www.reddit.com/search.json?q=cake%20recipes';
+        const data = await fetch(url); // Need to change what's inside fetch
+        if (!data.ok) throw new Error('Network response error');
         return data.json();
     }
 );
@@ -28,7 +30,7 @@ export const allPostsSlice = createSlice({
         [loadPosts.fulfilled]: (state, action) => {
             state.posts.push(action.payload);
             state.isLoading = false;
-            state.hasError = true;
+            state.hasError = false;
         },
         [loadPosts.rejected]: (state, action) => {
             state.isLoading = false;
@@ -36,3 +38,5 @@ export const allPostsSlice = createSlice({
         }
     }
 });
+
+export default allPostsSlice.reducer;
