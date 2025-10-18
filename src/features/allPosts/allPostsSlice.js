@@ -22,20 +22,23 @@ export const allPostsSlice = createSlice({
             state.posts.push(action.payload);
         }
     },
-    extraReducers: {
-        [loadPosts.pending]: (state, action) => {
-            state.isLoading = true;
-            state.hasError = false;
-        },
-        [loadPosts.fulfilled]: (state, action) => {
-            state.posts.push(action.payload);
-            state.isLoading = false;
-            state.hasError = false;
-        },
-        [loadPosts.rejected]: (state, action) => {
-            state.isLoading = false;
-            state.hasError = true;
-        }
+    extraReducers: (builder) => {
+        builder
+            .addCase(loadPosts.pending, state => {
+                state.isLoading = true;
+                state.hasError = false;
+            })
+
+            .addCase(loadPosts.fulfilled, (state, action) => {
+                const children = action.payload;
+                state.posts = children;
+                state.isLoading = false;
+                state.hasError = false;
+            })
+            .addCase(loadPosts.rejected, state => {
+                state.isLoading = false;
+                state.hasError = true;
+            });
     }
 });
 
