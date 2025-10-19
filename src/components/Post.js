@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Post({ likeCount = 0, title = 'Untitled', author = 'Unknown Author', timeframe = 0.0, commentCount = 0 }){
+export default function Post({ likeCount = 0, title = 'Untitled', author = 'Unknown Author', timeframe = 0.0, commentCount = 0, thumbnail = null }){
     return (
         <div className='post'>
             <div className='post-container'>
@@ -11,7 +11,7 @@ export default function Post({ likeCount = 0, title = 'Untitled', author = 'Unkn
                     <div className='post-body-container'>
                         <h2 className='post-title'>{title}</h2>
                         <div className='image-container'>
-                            <img src='' alt='' className='post-image'/>
+                            <img src={thumbnail} alt='' className='post-image'/>
                         </div>
                     </div>
                     <div className='post-footer-container'>
