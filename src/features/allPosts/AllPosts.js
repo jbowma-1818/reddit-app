@@ -30,7 +30,7 @@ const AllPosts = () => {
               author={d.author ?? 'Unknown Author'}
               timeframe={d.created_utc ?? 0}
               commentCount={d.num_comments ?? 0}
-              thumbnail={d.thumbnail ?? null}
+              url={d.url ?? null}
             />
           );
         })}
