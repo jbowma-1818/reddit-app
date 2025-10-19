@@ -6,7 +6,9 @@ export const loadPosts = createAsyncThunk(
         const url = postId ?? 'https://www.reddit.com/search.json?q=cake%20recipes';
         const data = await fetch(url); // Need to change what's inside fetch
         if (!data.ok) throw new Error('Network response error');
-        return data.json();
+        const json = await data.json();
+        console.log(json);
+        return json;
     }
 );
 
@@ -28,10 +30,8 @@ export const allPostsSlice = createSlice({
                 state.isLoading = true;
                 state.hasError = false;
             })
-
             .addCase(loadPosts.fulfilled, (state, action) => {
-                const children = action.payload;
-                state.posts = children;
+                state.posts = action.payload;
                 state.isLoading = false;
                 state.hasError = false;
             })
