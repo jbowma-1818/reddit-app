@@ -12,6 +12,13 @@ code {
     monospace;
 }
 
+/* General styling */
+
+.cover {
+  object-fit: contain;
+  object-position: center;
+}
+
 /* Post Component */
 .post {
   height: 50vh;
@@ -52,6 +59,10 @@ code {
   height: 100%;
   width: 100%;
   border-radius: 15px / 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .post-footer-container {
@@ -71,7 +82,10 @@ code {
 }
 
 .post-image {
-  height: 100%;
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
   border-radius: inherit;
 }

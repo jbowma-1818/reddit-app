@@ -15,22 +15,21 @@ const AllPosts = () => {
     if (isLoading) return <p>Loading…</p>;
     if (hasError) return <p>Failed to load posts.</p>;
   
-    // If your thunk hits the Reddit API, the list lives at payload.data.children
     const children = posts?.data?.children ?? posts ?? [];
   
     return (
       <div>
-        {children.map((c, i) => {
-          const d = c?.data ?? c; // be defensive
+        {children.map((child, i) => {
+          const data = child?.data ?? child;
           return (
             <Post
-              key={d.id ?? i}
-              likeCount={d.ups ?? 0}
-              title={d.title ?? 'Untitled'}
-              author={d.author ?? 'Unknown Author'}
-              timeframe={d.created_utc ?? 0}
-              commentCount={d.num_comments ?? 0}
-              url={d.url ?? null}
+              key={data.id ?? i}
+              likeCount={data.ups ?? 0}
+              title={data.title ?? 'Untitled'}
+              author={data.author ?? 'Unknown Author'}
+              timeframe={data.created_utc ?? 0}
+              commentCount={data.num_comments ?? 0}
+              url={data.url ?? null}
             />
           );
         })}
