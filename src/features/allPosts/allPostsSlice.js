@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const loadPosts = createAsyncThunk(
     'allPosts/getAllPosts',
     async (search, thunkAPI) => {
-        const searchUrl = search ?? 'https://www.reddit.com/search.json?q=cake%20recipes';
+        const searchUrl = search ?? 'https://www.reddit.com/r/popular.json';
         const data = await fetch(searchUrl); // Need to change what's inside fetch
         if (!data.ok) throw new Error('Network response error');
         const json = await data.json();
