@@ -10,8 +10,9 @@ export default function Post({ likeCount = 0, title = 'Untitled', author = 'Unkn
                 <div className='post-info-container'>
                     <div className='post-body-container'>
                         <h2 className='post-title'>{title}</h2>
-                        <div className='image-container'>
-                            <img src={url} alt='' className='post-image cover'/>
+                        <div className='image-container' >
+                            <div className='background-blur' style={{backgroundImage: `url(${url})` }} ></div>
+                            <img src={url} alt='' className='post-image cover' />
                         </div>
                     </div>
                     <div className='post-footer-container'>

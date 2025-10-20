@@ -19,6 +19,15 @@ code {
   object-position: center;
 }
 
+.background-blur {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(12px) brightness(0.8);
+  z-index: 0;
+}
+
 /* Post Component */
 .post {
   height: 50vh;
@@ -56,6 +65,7 @@ code {
 }
 
 .image-container {
+  position: relative;
   height: 100%;
   width: 100%;
   border-radius: 15px / 13px;
@@ -82,10 +92,9 @@ code {
 }
 
 .post-image {
+  position: relative;
+  z-index: 1;
   max-width: 100%;
   max-height: 100%;
-  width: auto;
-  height: auto;
-  display: block;
-  border-radius: inherit;
+  object-fit: contain;
 }
