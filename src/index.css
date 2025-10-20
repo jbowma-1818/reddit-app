@@ -13,7 +13,6 @@ code {
 }
 
 /* General styling */
-
 .cover {
   object-fit: contain;
   object-position: center;
@@ -33,6 +32,7 @@ code {
   height: 50vh;
   width: 60vw;
   margin: 20px auto;
+  margin-bottom: 50px;
   min-width: 500px;
   box-shadow: -5px 5px 12px 4px;
   border-radius: 8px;
@@ -78,7 +78,7 @@ code {
 .post-footer-container {
   margin-top: 15px;
   padding-top: 10px;
-  display: flex;
+  display: flex; 
   justify-content: space-between;
   border-top: 1px solid black;
 }
@@ -100,3 +100,21 @@ code {
 }
 
 /* Banner Component */
+.banner {
+  margin-bottom: 36px;
+}
+
+.banner-container {
+  height: 100%;
+  width: 100%;
+  max-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 12px 0;
+}
+
+.banner-icon {
+  max-height: inherit;
+  margin-right: 25px;
+}

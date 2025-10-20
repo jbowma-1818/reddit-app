@@ -4,9 +4,9 @@ import redditLogo from '../assets/Reddit-Logo.png'
 export default function Banner() {
     return (
         <div className='banner'>
-            <div className='bannerContainer'>
-                <span className='icon'><img src={redditLogo} alt='Reddit Logo'></img></span>
-                <span className='banner-title'>RedditMinimal</span> 
+            <div className='banner-container'>
+                <img src={redditLogo} alt='Reddit Logo' className='banner-icon'></img>
+                <p className='banner-title'>RedditMinimal</p> 
             </div>
         </div>
     );
