@@ -6,7 +6,7 @@ export default function Banner() {
         <div className='banner'>
             <div className='banner-container'>
                 <img src={redditLogo} alt='Reddit Logo' className='banner-icon'></img>
-                <p className='banner-title'>RedditMinimal</p> 
+                <p className='banner-title'><span className='text-color'>Reddit</span>Minimal</p> 
             </div>
         </div>
     );

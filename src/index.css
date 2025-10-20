@@ -27,6 +27,10 @@ code {
   z-index: 0;
 }
 
+.text-color {
+  color: #FF4500;
+}
+
 /* Post Component */
 .post {
   height: 50vh;
@@ -116,5 +120,10 @@ code {
 
 .banner-icon {
   max-height: inherit;
-  margin-right: 25px;
+  margin-right: 4px;
+}
+
+.banner-title {
+  font-weight: bold;
+  font-size: xx-large;
 }
