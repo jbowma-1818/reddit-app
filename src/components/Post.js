@@ -1,11 +1,12 @@
 import React from 'react';
+import PostRating from '../features/postRating/PostRating';
 
 export default function Post({ likeCount = 0, title = 'Untitled', author = 'Unknown Author', timeframe = 0.0, commentCount = 0, url = null }){
     return (
         <div className='post'>
             <div className='post-container'>
                 <div className='post-like-count-container'>               
-                    <span className='post-like-count'>{likeCount}</span>
+                    <PostRating likeCount={likeCount} />
                 </div> 
                 <div className='post-info-container'>
                     <div className='post-body-container'>
