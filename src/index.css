@@ -215,7 +215,8 @@ code {
   justify-content: flex-end;
   position: relative;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 16px;
+  background-color: whitesmoke;
 }
 
 .search-bar-container button {
@@ -223,6 +224,8 @@ code {
   background: none;
   scale: 1;
   border: none;
+  margin-left: 4px;
+  padding: 0 6px;
 }
 
 .search-bar-container button:hover {
@@ -243,4 +246,9 @@ code {
   padding: 0 2px 0 0;
   margin-left: 6px;
   border: none;
+  background-color: inherit;
+}
+
+.search-bar-input input:focus {
+  outline: none;
 }
