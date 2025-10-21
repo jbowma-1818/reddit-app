@@ -38,11 +38,20 @@ const PostRating = ({ likeCount }) => {
     }
 
     return (
-        <>
-            <button className='arrow'>&#8679;</button>
-            <p className='like-rating'>{likeCountString}</p>
-            <button className='arrow' style={{transform: 'rotate(180deg)'}}>&#8679;</button>
-        </>
+        <div className='post-rating'>
+            <button 
+                className='arrow'
+                onClick={handleUpVote}>
+                &#8679;
+            </button>
+            <p className='like-rating'>{formatLikes(rating)}</p>
+            <button 
+                className='arrow' 
+                style={{transform: 'rotate(180deg)'}}
+                onClick={handleDownVote}>
+            &#8679;
+            </button>
+        </div>
     );
 }
 
