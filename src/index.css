@@ -32,9 +32,37 @@ code {
 }
 
 .arrow {
-  font-size: larger;
-  background-color: inherit;
+  font-size: 1.6rem;
   border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: inherit;
+}
+
+.arrow.downvote {
+  transform: rotate(180deg);
+}
+
+.arrow.upvote:hover {
+  color:#FF4500;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+  transform: scale(1.1); 
+}
+
+.arrow.downvote:hover {
+  color: #6A5CFF;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(0, 153, 255, 0.6);
+  transform: rotate(180deg) scale(1.1); 
+}
+
+.arrow.upvote.active {
+  color: #FF4500;
+}
+
+.arrow.downvote.active {
+  color: #6A5CFF;
 }
 
 /* Post Component */

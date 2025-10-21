@@ -40,14 +40,13 @@ const PostRating = ({ likeCount }) => {
     return (
         <div className='post-rating'>
             <button 
-                className='arrow'
+                className={`arrow upvote ${voted === 1 ? 'active' : ''}`}
                 onClick={handleUpVote}>
                 &#8679;
             </button>
             <p className='like-rating'>{formatLikes(rating)}</p>
             <button 
-                className='arrow' 
-                style={{transform: 'rotate(180deg)'}}
+                className={`arrow downvote ${voted === -1 ? 'active' : ''}`}
                 onClick={handleDownVote}>
             &#8679;
             </button>
