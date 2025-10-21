@@ -17,16 +17,18 @@ const SearchBar = () => {
     };
 
     return (
-        <div className='search-bar-container'>
-            <div className='search-bar-input'>
-                <input 
-                    type='text'
-                    value={searchTerm}
-                    onChange={handleChange}
-                    placeholder='Search Reddit'
-                />
+        <div className='search-bar'>
+            <div className='search-bar-container'>
+                <div className='search-bar-input'>
+                    <input 
+                        type='text'
+                        value={searchTerm}
+                        onChange={handleChange}
+                        placeholder='Search Reddit'
+                    />
+                </div>
+                <button onClick={handleClear}>&#x24E7;</button>
             </div>
-            <button onClick={handleClear}>&#x24E7;</button>
         </div>
     );
 };
