@@ -1,5 +1,5 @@
 import React from 'react';
-import PostRating from '../features/postRating/PostRating';
+import PostRating from './PostRating';
 
 export default function Post({ likeCount = '0', title = 'Untitled', author = 'Unknown Author', timeframe = 0.0, commentCount = 0, url = null }){
     return (
