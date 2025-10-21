@@ -184,3 +184,10 @@ code {
   object-fit: contain;
   background: none;
 }
+
+/* Search Bar Component */
+.search-bar-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
