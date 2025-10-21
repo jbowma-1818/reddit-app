@@ -200,17 +200,22 @@ code {
 .search-bar {
   margin: auto 0;
   position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .search-bar-container {
   height: 30px;
+  width: 25%;
+  max-width: 300px;
   margin-right: 24px;
   display: flex;
   align-items: baseline;
   justify-content: flex-end;
   position: relative;
-  right: 0;
   border: 1px solid black;
+  border-radius: 10px;
 }
 
 .search-bar-container button {
@@ -236,5 +241,6 @@ code {
   height: 100%;
   width: 100%;
   padding: 0 2px;
+  margin-left: 6px;
   border: none;
 }
