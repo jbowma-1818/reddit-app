@@ -1,18 +1,14 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useState } from 'react';
 
 const PostRating = ({ likeCount }) => {
-    const dispatch = useDispatch();
-    let likeCountString = '';
+    const [rating, setRating] = useState(likeCount);
 
-    // Handles if likeCount is greater than 999
-    if(likeCount >= 1000 && likeCount < 100000000){
-        likeCountString = (likeCount/1000).toFixed(1) + 'k';
-    }else if(likeCount >= 100000000){
-        likeCountString = (likeCount/100000000).toFixed(1) + 'mil';
-    }else{
-        likeCountString = toString(likeCount);
-    }
+    // Formats count to be converted to a string string
+    const formatLikes = (count) => {
+        if(count >= 1_000_000) return (count / 1_000_000).toFixed(1) + 'M';
+        if(count >= 1_000) return (count / 1_000).toFixed(1) + 'k';
+        return count.toString();
+    };
 
     return (
         <>
