@@ -67,8 +67,9 @@ code {
 
 /* Post Component */
 .post {
-  height: 50vh;
+  height: 60vh;
   width: 60vw;
+  max-width: 600px;
   margin: 20px auto;
   margin-bottom: 50px;
   min-width: 500px;
