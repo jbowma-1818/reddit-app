@@ -27,7 +27,7 @@ const SearchBar = () => {
                         placeholder='Search Reddit'
                     />
                 </div>
-                <button onClick={handleClear}>&#x24E7;</button>
+                <button onClick={handleClear}><span>&#x24E7;</span></button>
             </div>
         </div>
     );
