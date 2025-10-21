@@ -9,7 +9,12 @@ const SearchBar = () => {
     // Update search field as the user types
     const handleChange = (e) => {
         dispatch(setSearchBarTerm(e.target.value));
-    }
+    };
+
+    // Clears input when pressed
+    const handleClear = () => {
+        dispatch(clearSearchBarTerm());
+    };
 
     return (
         <div className='search-bar'>
@@ -19,6 +24,7 @@ const SearchBar = () => {
                 onChange={handleChange}
                 placeholder='Search Reddit'
             />
+            <button onClick={handleClear}>&#x24E7;</button>
         </div>
     );
 };
