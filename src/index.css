@@ -124,12 +124,9 @@ code {
   border-top: 1px solid black;
 }
 
-.post-title {
-  
-}
-
-.post-like-count {
-
+.post-comments-container {
+  height: auto;
+  width: auto;
 }
 
 .post-image {
@@ -168,4 +165,20 @@ code {
 /* Post Rating */
 .like-rating {
   margin: 8px 0;
+}
+
+/* Comments */
+.comments {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: auto;
+  width: auto;
+}
+
+.comments-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  background: none;
 }

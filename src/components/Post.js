@@ -1,5 +1,6 @@
 import React from 'react';
 import PostRating from './PostRating';
+import Comments from '../features/comments/Comments';
 
 export default function Post({ likeCount = 0, title = 'Untitled', author = 'Unknown Author', timeframe = 0.0, commentCount = 0, url = null }){
     return (
@@ -17,9 +18,11 @@ export default function Post({ likeCount = 0, title = 'Untitled', author = 'Unkn
                         </div>
                     </div>
                     <div className='post-footer-container'>
-                        <span className='post-author'>Posted by {author}</span>
-                        <span className='post-timeframe'>{timeframe}</span>
-                        <span className='post-comments-count'>{commentCount}</span>
+                        <div className='post-author'>Posted by {author}</div>
+                        <div className='post-timeframe'>{timeframe}</div>
+                        <div className='post-comments-container'>
+                            <Comments commentCount={commentCount} />
+                        </div>
                     </div>
                 </div>
 
