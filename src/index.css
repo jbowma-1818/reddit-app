@@ -213,8 +213,14 @@ code {
 .search-bar-container button {
   height: inherit;
   background: none;
-  scale: 1.2;
+  scale: 1;
   border: none;
+}
+
+.search-bar-container button:hover {
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  color: red
 }
 
 .search-bar-input {
