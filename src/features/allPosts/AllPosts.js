@@ -15,13 +15,9 @@ const AllPosts = () => {
     if (isLoading) return <p>Loading…</p>;
     if (hasError) return <p>Failed to load posts.</p>;
   
-    const children = posts?.data?.children ?? posts ?? [];
-  
     return (
       <div>
-        {children.map((child, i) => {
-          const data = child?.data ?? child;
-          return (
+        {posts.map((data, i) => (
             <Post
               key={data.id ?? i}
               likeCount={data.ups ?? 0}
@@ -31,8 +27,8 @@ const AllPosts = () => {
               commentCount={data.num_comments ?? 0}
               url={data.url ?? null}
             />
-          );
-        })}
+          )
+        )}
       </div>
     );
   };

@@ -3,6 +3,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 export const loadPosts = createAsyncThunk(
     'allPosts/getAllPosts',
     async (search, thunkAPI) => {
+        console.log(search);
         const searchUrl = search ?? 'https://www.reddit.com/r/popular.json';
         const data = await fetch(searchUrl); // Need to change what's inside fetch
         if (!data.ok) throw new Error('Network response error');
@@ -31,7 +32,7 @@ export const allPostsSlice = createSlice({
                 state.hasError = false;
             })
             .addCase(loadPosts.fulfilled, (state, action) => {
-                state.posts = action.payload;
+                state.posts = action.payload?.data?.children?.map(child => child.data) ?? [];
                 state.isLoading = false;
                 state.hasError = false;
             })
