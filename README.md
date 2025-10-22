@@ -30,7 +30,7 @@ The project demonstrates practical experience in **frontend web development**, *
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/reddit-app.git
+   git clone https://github.com/jbowma-1818/reddit-app.git
    cd reddit-app
    ```
 
