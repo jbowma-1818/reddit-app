@@ -39,7 +39,7 @@ const AllPosts = () => {
               likeCount={data.ups ?? 0}
               title={data.title ?? 'Untitled'}
               author={data.author ?? 'Unknown Author'}
-              timeframe={data.created_utc ?? 0}
+              timePosted={data.created_utc ?? 0}
               commentCount={data.num_comments ?? 0}
               url={
                 videoUrl
