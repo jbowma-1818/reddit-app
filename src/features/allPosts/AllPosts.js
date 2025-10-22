@@ -16,8 +16,24 @@ const AllPosts = () => {
     if (hasError) return <p>Failed to load posts.</p>;
   
     return (
-      <div>
-        {posts.map((data, i) => (
+        <div>
+        {posts.map((data, i) => {
+          const videoUrl =
+            data?.secure_media?.reddit_video?.fallback_url || 
+            data?.media?.reddit_video?.fallback_url ||
+            data?.preview?.reddit_video_preview?.fallback_url ||
+            data?.crosspost_parent_list?.[0]?.secure_media?.reddit_video?.fallback_url ||
+            data?.crosspost_parent_list?.[0]?.media?.reddit_video?.fallback_url ||
+            null;
+  
+          const isVideo =
+            Boolean(videoUrl) ||
+            data?.is_video === true ||
+            data?.post_hint === 'hosted:video';
+
+            console.log(isVideo);
+  
+          return (
             <Post
               key={data.id ?? i}
               likeCount={data.ups ?? 0}
@@ -25,10 +41,16 @@ const AllPosts = () => {
               author={data.author ?? 'Unknown Author'}
               timeframe={data.created_utc ?? 0}
               commentCount={data.num_comments ?? 0}
-              url={data.url ?? null}
+              url={
+                videoUrl
+                ?? data?.url_overridden_by_dest
+                ?? data?.url
+                ?? null
+              }
+              isVideo={isVideo}
             />
-          )
-        )}
+          );
+        })}
       </div>
     );
   };
