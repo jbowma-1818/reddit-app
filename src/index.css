@@ -169,6 +169,12 @@ code {
   align-items: center;
 }
 
+@media (max-width: 750px){
+  .search-bar {
+    visibility: hidden;
+  }
+}
+
 /* Post Rating */
 .post-rating {
   display: flex;
