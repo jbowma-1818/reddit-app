@@ -45,8 +45,8 @@ const SearchBar = () => {
                         onChange={handleChange}
                         placeholder='Search Reddit'
                     />
+                    <button type='button' onClick={handleClear}><span>&#x24E7;</span></button>
                 </div>
-                <button type='button' onClick={handleClear}><span>&#x24E7;</span></button>
             </div>
         </form>
     );

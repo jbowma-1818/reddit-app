@@ -232,7 +232,10 @@ code {
   border: none;
   margin-left: 4px;
   padding: 0 6px;
+  visibility: hidden;
 }
+
+.search-bar-input:focus + button
 
 .search-bar-container button:hover {
   border-radius: 50%;
@@ -243,6 +246,7 @@ code {
 .search-bar-input {
   height: 100%;
   width: 300px;
+  display: flex;
 }
 
 .search-bar-input input {
