@@ -232,7 +232,7 @@ code {
   border: none;
   margin-left: 4px;
   padding: 0 6px;
-  visibility: hidden;
+  visibility: hidden; 
 }
 
 .search-bar-input:focus-within button {
