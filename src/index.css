@@ -235,7 +235,9 @@ code {
   visibility: hidden;
 }
 
-.search-bar-input:focus + button
+.search-bar-input:focus-within button {
+  visibility: visible;
+}
 
 .search-bar-container button:hover {
   border-radius: 50%;
