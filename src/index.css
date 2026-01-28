@@ -195,7 +195,7 @@ code {
 }
 
 /* Comment */
-.comment {
+.comment-count {
   display: flex;
   align-items: center;
   gap: 6px;
