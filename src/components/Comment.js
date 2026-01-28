@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import commentIcon from '../../assets/comment-icon.png';
+import commentIcon from '../assets/comment-icon.png';
 
-const Comments = ({ commentCount }) => {
+const Comment = ({ commentCount }) => {
     return (
         <div className='comments'>
             <img src={commentIcon} className='comments-icon'></img>
@@ -11,4 +11,4 @@ const Comments = ({ commentCount }) => {
     );
 };
 
-export default Comments;
+export default Comment;
