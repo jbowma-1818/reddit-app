@@ -4,8 +4,8 @@ import commentIcon from '../assets/comment-icon.png';
 
 const Comment = ({ commentCount }) => {
     return (
-        <div className='comments'>
-            <img src={commentIcon} className='comments-icon'></img>
+        <div className='comment'>
+            <img src={commentIcon} className='comment-icon'></img>
             <span>{commentCount}</span>
         </div> 
     );

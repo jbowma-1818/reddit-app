@@ -121,7 +121,7 @@ code {
   border-top: 1px solid black;
 }
 
-.post-comments-container {
+.post-comment-container {
   height: auto;
   width: auto;
 }
@@ -194,8 +194,8 @@ code {
   margin: 8px 0;
 }
 
-/* Comments */
-.comments {
+/* Comment */
+.comment {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -203,7 +203,7 @@ code {
   width: auto;
 }
 
-.comments-icon {
+.comment-icon {
   width: 20px;
   height: 20px;
   object-fit: contain;
