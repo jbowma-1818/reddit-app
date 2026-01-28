@@ -1,6 +1,5 @@
 import React from 'react';
 import PostRating from './PostRating';
-import Comment from './CommentCount';
 import PostContent from './PostContent';
 import CommentCount from './CommentCount';
 
