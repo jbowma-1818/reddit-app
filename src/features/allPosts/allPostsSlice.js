@@ -3,12 +3,12 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 export const loadPosts = createAsyncThunk(
     'allPosts/getAllPosts',
     async (search, thunkAPI) => {
-        console.log(search);
+        //console.log(search);
         const searchUrl = search ?? 'https://www.reddit.com/r/popular.json';
         const data = await fetch(searchUrl);
         if (!data.ok) throw new Error('Network response error');
         const json = await data.json();
-        console.log(json);
+        //console.log(json);
         return json;
     }
 );
