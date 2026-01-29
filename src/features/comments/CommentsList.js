@@ -1,5 +1,5 @@
 
-export default function allComments( {author = 'Unknown Author', timePosted = 0.0, likeCount = 0} ) {
+export default function commentList( {author = 'Unknown Author', timePosted = 0.0, likeCount = 0} ) {
     return (
         <div className='comment'>
             <div className='comment-container'>
