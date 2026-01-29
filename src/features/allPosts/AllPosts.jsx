@@ -36,6 +36,7 @@ const AllPosts = () => {
           return (
             <Post
               key={data.id ?? i}
+              postId={data.id}
               likeCount={data.ups ?? 0}
               title={data.title ?? 'Untitled'}
               author={data.author ?? 'Unknown Author'}

@@ -3,7 +3,7 @@ import PostRating from './PostRating';
 import PostContent from './PostContent';
 import CommentButton from './CommentButton';
 
-export default function Post({ likeCount = 0, title = 'Untitled', author = 'Unknown Author', timePosted = 0.0, commentCount = 0, url = null, isVideo = false }){
+export default function Post({ likeCount = 0, title = 'Untitled', author = 'Unknown Author', timePosted = 0.0, postId = 0, commentCount = 0, url = null, isVideo = false }){
     return (
         <div className='post'>
             <div className='post-container'>
@@ -21,7 +21,7 @@ export default function Post({ likeCount = 0, title = 'Untitled', author = 'Unkn
                         <div className='post-author'>Posted by {author}</div>
                         <div className='post-time-posted'>{timePosted}</div>
                         <div className='post-comments-container'>
-                            <CommentButton commentCount={commentCount} />
+                            <CommentButton commentCount={commentCount} postId={postId} />
                         </div>
                     </div>
                 </div>
