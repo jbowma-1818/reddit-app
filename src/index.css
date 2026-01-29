@@ -195,12 +195,22 @@ code {
 }
 
 /* Comment */
+.comment {
+
+}
+
 .comment-count {
   display: flex;
   align-items: center;
   gap: 6px;
   height: auto;
   width: auto;
+  border: none;
+  background: inherit;
+}
+
+.comment-count:hover {
+  cursor: pointer;
 }
 
 .comment-icon {
